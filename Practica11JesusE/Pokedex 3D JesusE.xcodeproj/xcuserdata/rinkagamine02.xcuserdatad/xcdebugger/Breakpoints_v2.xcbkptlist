@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5887357B-0F42-4E22-B748-A9C2C22B02AA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practica11JesusE/Controller/AgregarContactoController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AgregarContactoController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - e7a74938f18b1b42"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.txtNombre.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - 4d68aa42e8496f4e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.txtNombre.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - 9edd191fda77b489"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.txtNombre.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - 81c7e85af380b73d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.txtNombre.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - dcabb3e0d6eb073f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Practica11JesusE.AgregarContactoController"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  uuid = "DD586D2A-CD5B-426C-AD70-609D4F8F4333 - 50c63fe4a7c7f08c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practica11JesusE.AgregarContactoController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Practica11JesusE.AgregarContactoController&gt;"
+                  moduleName = "Practica11JesusE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rinkagamine02/Desktop/PDM_Practica11-main/Practica11JesusE/Practica11JesusE/Controller/AgregarContactoController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "198">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

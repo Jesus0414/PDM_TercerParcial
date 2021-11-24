@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQ8-bD-eBD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon Solid.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tWp-TW-9TJ">
+            <objects>
+                <navigationController id="bQ8-bD-eBD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FhE-SL-Huh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.93734496875562234" blue="0.74937987502248948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="26"/>
+                            <color key="textColor" red="0.36704987668165939" green="0.21141941519908031" blue="0.6295336787564767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hvB-Gz-lpb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qp4-Bu-MWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1344" y="134"/>
+        </scene>
+        <!--Lista Pokemon Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListaPokemonController" customModule="Pokedex_3D_JesusE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-Lm-OMI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" red="0.98865707732679198" green="1" blue="0.80186739439875276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPokemon" rowHeight="195" id="8NO-Vt-Hwc" customClass="CeldaPokemonController" customModule="Pokedex_3D_JesusE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="195"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8NO-Vt-Hwc" id="i6X-50-I2p">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="195"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4a-eo-ZGr">
+                                                    <rect key="frame" x="12" y="19" width="372" height="37"/>
+                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="24"/>
+                                                    <color key="textColor" red="0.42746113989637302" green="0.32065681821234787" blue="0.029474786450909299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lj-nB-Kgm">
+                                                    <rect key="frame" x="12" y="109.5" width="377" height="37"/>
+                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="24"/>
+                                                    <color key="textColor" red="0.42746113989637302" green="0.32065681821234787" blue="0.029474786450909299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah1-Yj-Mzs">
+                                                    <rect key="frame" x="12" y="64" width="377" height="37.5"/>
+                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="24"/>
+                                                    <color key="textColor" red="0.42746113989637302" green="0.32065681821234787" blue="0.029474786450909299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaC-F5-GZs">
+                                                    <rect key="frame" x="12" y="154.5" width="372" height="34"/>
+                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="24"/>
+                                                    <color key="textColor" red="0.42746113989637302" green="0.32065681821234787" blue="0.029474786450909299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.84196891191709844" green="0.31099907131876775" blue="0.40310208492853933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="ah1-Yj-Mzs" firstAttribute="top" secondItem="n4a-eo-ZGr" secondAttribute="bottom" constant="8" id="6Sb-TT-M95"/>
+                                                <constraint firstItem="n4a-eo-ZGr" firstAttribute="top" secondItem="i6X-50-I2p" secondAttribute="topMargin" constant="8" id="7cE-0g-Gfz"/>
+                                                <constraint firstItem="xaC-F5-GZs" firstAttribute="top" secondItem="0Lj-nB-Kgm" secondAttribute="bottom" constant="8" id="D2G-fx-0Aj"/>
+                                                <constraint firstItem="0Lj-nB-Kgm" firstAttribute="leading" secondItem="i6X-50-I2p" secondAttribute="leading" constant="12" id="Ynf-GG-Tnw"/>
+                                                <constraint firstItem="xaC-F5-GZs" firstAttribute="leading" secondItem="i6X-50-I2p" secondAttribute="leading" constant="12" id="apc-q0-val"/>
+                                                <constraint firstItem="ah1-Yj-Mzs" firstAttribute="leading" secondItem="i6X-50-I2p" secondAttribute="leading" constant="12" id="cYn-tb-cJR"/>
+                                                <constraint firstItem="n4a-eo-ZGr" firstAttribute="leading" secondItem="i6X-50-I2p" secondAttribute="leadingMargin" constant="-8" id="ez2-P9-A0N"/>
+                                                <constraint firstItem="0Lj-nB-Kgm" firstAttribute="top" secondItem="ah1-Yj-Mzs" secondAttribute="bottom" constant="8" id="h6O-vQ-0In"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.72797927461139889" green="0.62051567636574201" blue="0.67597362123472671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="n4a-eo-ZGr" firstAttribute="height" secondItem="8NO-Vt-Hwc" secondAttribute="height" multiplier="0.190909" id="5fo-3x-yG9"/>
+                                            <constraint firstItem="0Lj-nB-Kgm" firstAttribute="width" secondItem="8NO-Vt-Hwc" secondAttribute="width" multiplier="0.910628" id="C2E-Ia-BZ2"/>
+                                            <constraint firstItem="0Lj-nB-Kgm" firstAttribute="height" secondItem="8NO-Vt-Hwc" secondAttribute="height" multiplier="0.190909" id="JJM-eH-4pV"/>
+                                            <constraint firstItem="xaC-F5-GZs" firstAttribute="height" secondItem="8NO-Vt-Hwc" secondAttribute="height" multiplier="0.107692" constant="13.000060000000001" id="TTG-UC-8q9"/>
+                                            <constraint firstItem="ah1-Yj-Mzs" firstAttribute="width" secondItem="8NO-Vt-Hwc" secondAttribute="width" multiplier="0.939614" constant="-12" id="Ttt-Rc-o7N"/>
+                                            <constraint firstItem="ah1-Yj-Mzs" firstAttribute="height" secondItem="8NO-Vt-Hwc" secondAttribute="height" multiplier="0.190909" id="cQ9-pu-n4K"/>
+                                            <constraint firstItem="xaC-F5-GZs" firstAttribute="width" secondItem="8NO-Vt-Hwc" secondAttribute="width" multiplier="0.898551" id="hO1-b3-gJP"/>
+                                            <constraint firstItem="n4a-eo-ZGr" firstAttribute="width" secondItem="8NO-Vt-Hwc" secondAttribute="width" multiplier="0.149758" constant="310" id="lnk-vA-UYa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lblCategoria" destination="xaC-F5-GZs" id="X3e-25-IyM"/>
+                                            <outlet property="lblNombre" destination="n4a-eo-ZGr" id="0Rs-Pu-Hk1"/>
+                                            <outlet property="lblNumero" destination="0Lj-nB-Kgm" id="qCz-Rq-yJt"/>
+                                            <outlet property="lblRegion" destination="ah1-Yj-Mzs" id="gST-Eb-KIW"/>
+                                            <segue destination="5Ac-jn-R0I" kind="show" identifier="goToEdicion" id="5ZG-lx-Chc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0Ue-0J-4oB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="skZ-k0-mJA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.72797927461139889" green="0.094301579566341276" blue="0.023775501797530393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.72797927461139889" green="0.19343404493359184" blue="0.20223408842846044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fhz-Lm-OMI" secondAttribute="bottom" id="4Sv-Iz-TNC"/>
+                            <constraint firstItem="Fhz-Lm-OMI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c0G-Ot-k7A"/>
+                            <constraint firstItem="Fhz-Lm-OMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="liz-M5-B8M"/>
+                            <constraint firstItem="Fhz-Lm-OMI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="r5l-eZ-HHJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yba-Z5-dUg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lbB-R9-Mhw">
+                            <color key="tintColor" red="0.84196891191709844" green="0.030517782264605622" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYB-NK-XHa" kind="show" identifier="goToCreacion" id="e3F-UH-mot"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tvPokemon" destination="Fhz-Lm-OMI" id="XnP-Ju-CSC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="133.92857142857142"/>
+        </scene>
+        <!--Editar Pokemon Controller-->
+        <scene sceneID="KdW-Xs-rHe">
+            <objects>
+                <viewController id="5Ac-jn-R0I" customClass="EditarPokemonController" customModule="Pokedex_3D_JesusE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUN-LK-XmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-Tb-iQZ">
+                                <rect key="frame" x="20" y="124" width="80.5" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80.5" id="bl4-Ew-1lx"/>
+                                    <constraint firstAttribute="height" constant="28" id="xQW-hk-6I9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vw9-v0-l4j">
+                                <rect key="frame" x="20" y="160" width="374" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="17I-cv-0vy"/>
+                                    <constraint firstAttribute="width" constant="374" id="Kye-sL-Lcm"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Región:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-gc-a9a">
+                                <rect key="frame" x="20" y="202" width="84" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="rNM-na-F0r"/>
+                                    <constraint firstAttribute="height" constant="21" id="sv9-BH-0Bn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ez-gh-K97">
+                                <rect key="frame" x="20" y="231" width="374" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="2mh-7r-TPV"/>
+                                    <constraint firstAttribute="height" constant="34" id="rOV-i5-D04"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-z9-jrv">
+                                <rect key="frame" x="20" y="273" width="84" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A4m-Kw-NQT"/>
+                                    <constraint firstAttribute="width" constant="84" id="cq8-Nt-efH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsP-nx-cF0">
+                                <rect key="frame" x="20" y="302" width="374" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.68236871846133618" blue="0.2450558201899522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Azo-U1-tLv"/>
+                                    <constraint firstAttribute="width" constant="374" id="tdx-Zn-uE6"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-Ve-aIP">
+                                <rect key="frame" x="20" y="344" width="73" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="UCw-eN-9RT"/>
+                                    <constraint firstAttribute="width" constant="73" id="ygq-0a-Wwu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-fQ-GAL">
+                                <rect key="frame" x="20" y="380" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="PVx-b8-Xfv"/>
+                                    <constraint firstAttribute="height" constant="34" id="TSf-Eb-LkP"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El2-3X-om7">
+                                <rect key="frame" x="239" y="344" width="53" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="EXE-DP-Lw3"/>
+                                    <constraint firstAttribute="width" constant="53" id="GZJ-JD-pEC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tB0-Gg-9QL">
+                                <rect key="frame" x="239" y="380" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="B8r-3t-1K5"/>
+                                    <constraint firstAttribute="width" constant="155" id="Gdo-BZ-WCc"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4D-xO-TZ4">
+                                <rect key="frame" x="20" y="422" width="102" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="Egp-x3-zs0"/>
+                                    <constraint firstAttribute="height" constant="28" id="jw1-2b-Sy2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-yh-4fm">
+                                <rect key="frame" x="20" y="458" width="374" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="95j-m3-XoB"/>
+                                    <constraint firstAttribute="height" constant="34" id="Nsf-5X-BCz"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilidades:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtJ-ft-wfR">
+                                <rect key="frame" x="20" y="500" width="118" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="2ff-9Q-ewD"/>
+                                    <constraint firstAttribute="width" constant="118" id="xfY-Xd-mTj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2sM-xN-8y4">
+                                <rect key="frame" x="20" y="536" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="3vX-CK-un1"/>
+                                    <constraint firstAttribute="height" constant="34" id="6tq-pH-BKM"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilidad oculta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57G-cB-MLt">
+                                <rect key="frame" x="239" y="500" width="157" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="0Wp-on-jg1"/>
+                                    <constraint firstAttribute="height" constant="28" id="wED-7S-aMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9P-ar-7Gl">
+                                <rect key="frame" x="239" y="536" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Iww-NF-8v9"/>
+                                    <constraint firstAttribute="width" constant="155" id="uCq-Vi-xut"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDG-qZ-ijw">
+                                <rect key="frame" x="20" y="578" width="62" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="SIf-qw-0BW"/>
+                                    <constraint firstAttribute="width" constant="62" id="XSy-ci-Gby"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqA-Ze-CA9">
+                                <rect key="frame" x="20" y="614" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="MWl-nD-Tmt"/>
+                                    <constraint firstAttribute="width" constant="155" id="msA-nl-ZX2"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-vP-szq">
+                                <rect key="frame" x="239" y="578" width="68" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="XQO-el-6dP"/>
+                                    <constraint firstAttribute="height" constant="28" id="jZR-h7-nYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.48963730569948183" green="0.034099214018829843" blue="0.45997967295129866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFk-uy-0S3">
+                                <rect key="frame" x="239" y="614" width="155" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.69604288514780321" blue="0.23034227273112595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="TK1-li-ibc"/>
+                                    <constraint firstAttribute="height" constant="34" id="Zny-PM-U5g"/>
+                                </constraints>
+                                <color key="textColor" red="0.67098445595854916" green="0.046728552544322371" blue="0.63034251478511294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-Y9-mBe">
+                                <rect key="frame" x="287" y="696" width="107" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="SfR-yC-hoO"/>
+                                    <constraint firstAttribute="width" constant="107" id="cGo-NN-HJ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                <state key="normal" title="Eliminar">
+                                    <color key="titleColor" red="1" green="0.25886775528396244" blue="0.0019246208697997202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTapEliminar:" destination="5Ac-jn-R0I" eventType="touchUpInside" id="NYW-h3-bY7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n16-ZN-QeN">
+                                <rect key="frame" x="20" y="696" width="84" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="1f0-R0-UPu"/>
+                                    <constraint firstAttribute="width" constant="84" id="8Bm-db-jiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                <state key="normal" title="Editar">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.10487716214132625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTapEditar:" destination="5Ac-jn-R0I" eventType="touchUpInside" id="hH5-Xl-jzR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wW-2z-RKU">
+                                <rect key="frame" x="142" y="696" width="107" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="LIR-Lk-1pv"/>
+                                    <constraint firstAttribute="width" constant="107" id="ZuX-tp-Tl8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="doTapGuardar:" destination="5Ac-jn-R0I" eventType="touchUpInside" id="Bbm-bj-qaH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DOB-CS-Vli"/>
+                        <color key="backgroundColor" red="0.6606217616580311" green="0.32986158256427117" blue="0.073471519801508581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.1466595158217634" blue="0.0010420426861337262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HtJ-ft-wfR" firstAttribute="top" secondItem="4Qu-yh-4fm" secondAttribute="bottom" constant="8" symbolic="YES" id="0KH-pd-5CL"/>
+                            <constraint firstItem="GqA-Ze-CA9" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="0Yr-CF-8wH"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="BFk-uy-0S3" secondAttribute="trailing" constant="4" id="0sc-aX-3xM"/>
+                            <constraint firstItem="4Qu-yh-4fm" firstAttribute="top" secondItem="I4D-xO-TZ4" secondAttribute="bottom" constant="8" symbolic="YES" id="0tf-LT-onX"/>
+                            <constraint firstItem="bqV-Ve-aIP" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="1r9-1I-BqZ"/>
+                            <constraint firstItem="YDG-qZ-ijw" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="3mz-fh-G8S"/>
+                            <constraint firstItem="4Qu-yh-4fm" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="5ku-ON-bKy"/>
+                            <constraint firstItem="a9P-ar-7Gl" firstAttribute="top" secondItem="57G-cB-MLt" secondAttribute="bottom" constant="8" symbolic="YES" id="6Wd-f9-gHf"/>
+                            <constraint firstItem="YDG-qZ-ijw" firstAttribute="top" secondItem="2sM-xN-8y4" secondAttribute="bottom" constant="8" symbolic="YES" id="7Oq-Hd-3U7"/>
+                            <constraint firstItem="dmg-gc-a9a" firstAttribute="top" secondItem="Vw9-v0-l4j" secondAttribute="bottom" constant="8" symbolic="YES" id="84u-fA-bY3"/>
+                            <constraint firstItem="I4D-xO-TZ4" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="8ox-6t-04u"/>
+                            <constraint firstItem="HtJ-ft-wfR" firstAttribute="top" secondItem="4Qu-yh-4fm" secondAttribute="bottom" constant="8" symbolic="YES" id="8sS-HB-Qcu"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="El2-3X-om7" secondAttribute="trailing" constant="122" id="9Fz-bI-ctg"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="I4D-xO-TZ4" secondAttribute="trailing" constant="276" id="A0r-eg-etf"/>
+                            <constraint firstItem="0ez-gh-K97" firstAttribute="top" secondItem="dmg-gc-a9a" secondAttribute="bottom" constant="8" symbolic="YES" id="A9j-Fe-Nz4"/>
+                            <constraint firstItem="0ez-gh-K97" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="AN1-VF-gFS"/>
+                            <constraint firstItem="bqV-Ve-aIP" firstAttribute="top" secondItem="wsP-nx-cF0" secondAttribute="bottom" constant="8" symbolic="YES" id="Anv-Ze-Pqu"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="QBL-vP-szq" secondAttribute="trailing" constant="107" id="B4E-CO-U4g"/>
+                            <constraint firstItem="bqV-Ve-aIP" firstAttribute="top" secondItem="wsP-nx-cF0" secondAttribute="bottom" constant="8" symbolic="YES" id="BKN-4f-KCH"/>
+                            <constraint firstItem="n16-ZN-QeN" firstAttribute="top" secondItem="GqA-Ze-CA9" secondAttribute="bottom" constant="48" id="BbX-y5-gFZ"/>
+                            <constraint firstItem="t7y-Y9-mBe" firstAttribute="top" secondItem="BFk-uy-0S3" secondAttribute="bottom" constant="48" id="Btw-iy-ttK"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="57G-cB-MLt" secondAttribute="trailing" constant="18" id="Csh-2o-chm"/>
+                            <constraint firstItem="El2-3X-om7" firstAttribute="leading" secondItem="bqV-Ve-aIP" secondAttribute="trailing" constant="146" id="D0k-8i-QLn"/>
+                            <constraint firstItem="2sM-xN-8y4" firstAttribute="top" secondItem="HtJ-ft-wfR" secondAttribute="bottom" constant="8" symbolic="YES" id="DJv-F1-tVs"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="BFk-uy-0S3" secondAttribute="trailing" constant="20" id="E0z-0T-sRP"/>
+                            <constraint firstItem="t7y-Y9-mBe" firstAttribute="leading" secondItem="0wW-2z-RKU" secondAttribute="trailing" constant="38" id="E7y-2n-nSm"/>
+                            <constraint firstItem="El2-3X-om7" firstAttribute="top" secondItem="wsP-nx-cF0" secondAttribute="bottom" constant="8" symbolic="YES" id="GDG-6C-QfE"/>
+                            <constraint firstItem="6ny-fQ-GAL" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="GSD-bO-raf"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="t7y-Y9-mBe" secondAttribute="trailing" constant="20" id="ID0-YZ-hHT"/>
+                            <constraint firstItem="t7y-Y9-mBe" firstAttribute="top" secondItem="BFk-uy-0S3" secondAttribute="bottom" constant="48" id="JFV-cZ-CnC"/>
+                            <constraint firstItem="a9P-ar-7Gl" firstAttribute="top" secondItem="57G-cB-MLt" secondAttribute="bottom" constant="8" symbolic="YES" id="JFd-q7-zHq"/>
+                            <constraint firstItem="n16-ZN-QeN" firstAttribute="top" secondItem="GqA-Ze-CA9" secondAttribute="bottom" constant="48" id="JKY-Hr-EtF"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="57G-cB-MLt" secondAttribute="trailing" constant="2" id="JzT-mG-ysV"/>
+                            <constraint firstItem="hnl-Tb-iQZ" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="KB3-Ey-w73"/>
+                            <constraint firstItem="Vw9-v0-l4j" firstAttribute="top" secondItem="hnl-Tb-iQZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lhi-Ey-MqN"/>
+                            <constraint firstItem="a9P-ar-7Gl" firstAttribute="leading" secondItem="2sM-xN-8y4" secondAttribute="trailing" constant="64" id="Lut-MC-afJ"/>
+                            <constraint firstItem="wsP-nx-cF0" firstAttribute="top" secondItem="J5t-z9-jrv" secondAttribute="bottom" constant="8" symbolic="YES" id="MbJ-Pf-0uE"/>
+                            <constraint firstItem="J5t-z9-jrv" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="OSj-2t-1gO"/>
+                            <constraint firstItem="dmg-gc-a9a" firstAttribute="top" secondItem="Vw9-v0-l4j" secondAttribute="bottom" constant="8" symbolic="YES" id="RXp-4P-JLI"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="a9P-ar-7Gl" secondAttribute="trailing" constant="20" id="SXD-xR-X57"/>
+                            <constraint firstItem="J5t-z9-jrv" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="Say-Oz-keJ"/>
+                            <constraint firstItem="57G-cB-MLt" firstAttribute="top" secondItem="4Qu-yh-4fm" secondAttribute="bottom" constant="8" symbolic="YES" id="Sv9-Nq-nhU"/>
+                            <constraint firstItem="dmg-gc-a9a" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="Szy-oP-FVJ"/>
+                            <constraint firstItem="57G-cB-MLt" firstAttribute="top" secondItem="4Qu-yh-4fm" secondAttribute="bottom" constant="8" symbolic="YES" id="TE0-yv-Ahg"/>
+                            <constraint firstItem="2sM-xN-8y4" firstAttribute="top" secondItem="HtJ-ft-wfR" secondAttribute="bottom" constant="8" symbolic="YES" id="XCh-O3-Vem"/>
+                            <constraint firstItem="GqA-Ze-CA9" firstAttribute="top" secondItem="YDG-qZ-ijw" secondAttribute="bottom" constant="8" symbolic="YES" id="XGk-2s-6AQ"/>
+                            <constraint firstItem="Vw9-v0-l4j" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="Xy7-Wn-LOJ"/>
+                            <constraint firstItem="0wW-2z-RKU" firstAttribute="top" secondItem="GqA-Ze-CA9" secondAttribute="bottom" constant="48" id="Y8n-CK-yR9"/>
+                            <constraint firstItem="6ny-fQ-GAL" firstAttribute="top" secondItem="bqV-Ve-aIP" secondAttribute="bottom" constant="8" symbolic="YES" id="ZyV-M7-rTD"/>
+                            <constraint firstItem="YDG-qZ-ijw" firstAttribute="top" secondItem="2sM-xN-8y4" secondAttribute="bottom" constant="8" symbolic="YES" id="Zzz-L6-p5i"/>
+                            <constraint firstItem="6ny-fQ-GAL" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="aCd-BK-wDX"/>
+                            <constraint firstItem="El2-3X-om7" firstAttribute="top" secondItem="wsP-nx-cF0" secondAttribute="bottom" constant="8" symbolic="YES" id="aHj-RA-XyI"/>
+                            <constraint firstItem="hnl-Tb-iQZ" firstAttribute="top" secondItem="DOB-CS-Vli" secondAttribute="top" constant="16" id="asS-gc-LYr"/>
+                            <constraint firstItem="QBL-vP-szq" firstAttribute="top" secondItem="a9P-ar-7Gl" secondAttribute="bottom" constant="8" symbolic="YES" id="bIU-1f-GYq"/>
+                            <constraint firstItem="QBL-vP-szq" firstAttribute="top" secondItem="a9P-ar-7Gl" secondAttribute="bottom" constant="8" symbolic="YES" id="bgq-8y-bQy"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="a9P-ar-7Gl" secondAttribute="trailing" constant="4" id="bkK-5n-7YR"/>
+                            <constraint firstItem="BFk-uy-0S3" firstAttribute="leading" secondItem="GqA-Ze-CA9" secondAttribute="trailing" constant="64" id="cL9-fA-dRS"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="tB0-Gg-9QL" secondAttribute="trailing" constant="20" id="ce8-dv-rcE"/>
+                            <constraint firstItem="GqA-Ze-CA9" firstAttribute="top" secondItem="YDG-qZ-ijw" secondAttribute="bottom" constant="8" symbolic="YES" id="dCm-4B-Ir6"/>
+                            <constraint firstItem="0ez-gh-K97" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="dzQ-FE-7R6"/>
+                            <constraint firstItem="J5t-z9-jrv" firstAttribute="top" secondItem="0ez-gh-K97" secondAttribute="bottom" constant="8" symbolic="YES" id="eAF-QF-4eZ"/>
+                            <constraint firstItem="wsP-nx-cF0" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="eWm-DV-1uE"/>
+                            <constraint firstItem="Vw9-v0-l4j" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="fwi-vj-ReJ"/>
+                            <constraint firstItem="I4D-xO-TZ4" firstAttribute="top" secondItem="DOB-CS-Vli" secondAttribute="top" constant="16" id="gKN-WX-SHL"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="QBL-vP-szq" secondAttribute="trailing" constant="91" id="gNX-0P-ylK"/>
+                            <constraint firstItem="2sM-xN-8y4" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="hs8-UI-IXs"/>
+                            <constraint firstItem="tB0-Gg-9QL" firstAttribute="top" secondItem="El2-3X-om7" secondAttribute="bottom" constant="8" symbolic="YES" id="i2I-A2-Gf4"/>
+                            <constraint firstItem="hnl-Tb-iQZ" firstAttribute="top" secondItem="DOB-CS-Vli" secondAttribute="top" constant="36" id="jjB-Ji-tvK"/>
+                            <constraint firstItem="wsP-nx-cF0" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="kCc-NH-O59"/>
+                            <constraint firstItem="0wW-2z-RKU" firstAttribute="top" secondItem="GqA-Ze-CA9" secondAttribute="bottom" constant="48" id="kJ9-Yu-LR3"/>
+                            <constraint firstItem="t7y-Y9-mBe" firstAttribute="leading" secondItem="0wW-2z-RKU" secondAttribute="trailing" constant="38" id="kMy-2V-aub"/>
+                            <constraint firstItem="4Qu-yh-4fm" firstAttribute="top" secondItem="I4D-xO-TZ4" secondAttribute="bottom" constant="8" symbolic="YES" id="kfC-tI-cB0"/>
+                            <constraint firstItem="BFk-uy-0S3" firstAttribute="top" secondItem="QBL-vP-szq" secondAttribute="bottom" constant="8" symbolic="YES" id="mCL-NJ-ASN"/>
+                            <constraint firstItem="HtJ-ft-wfR" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="mXD-Ta-lg3"/>
+                            <constraint firstItem="dmg-gc-a9a" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="neO-gZ-Yev"/>
+                            <constraint firstItem="tB0-Gg-9QL" firstAttribute="leading" secondItem="6ny-fQ-GAL" secondAttribute="trailing" constant="64" id="od0-b1-eJD"/>
+                            <constraint firstItem="hnl-Tb-iQZ" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="ojT-NA-uPb"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="t7y-Y9-mBe" secondAttribute="trailing" constant="4" id="pgS-yI-6lG"/>
+                            <constraint firstItem="57G-cB-MLt" firstAttribute="leading" secondItem="HtJ-ft-wfR" secondAttribute="trailing" constant="101" id="pjx-i4-A2G"/>
+                            <constraint firstItem="0wW-2z-RKU" firstAttribute="leading" secondItem="n16-ZN-QeN" secondAttribute="trailing" constant="38" id="q3z-yL-CCU"/>
+                            <constraint firstItem="QBL-vP-szq" firstAttribute="leading" secondItem="YDG-qZ-ijw" secondAttribute="trailing" constant="157" id="s0k-Ko-j9D"/>
+                            <constraint firstItem="J5t-z9-jrv" firstAttribute="top" secondItem="0ez-gh-K97" secondAttribute="bottom" constant="8" symbolic="YES" id="srx-dM-FJU"/>
+                            <constraint firstItem="I4D-xO-TZ4" firstAttribute="top" secondItem="6ny-fQ-GAL" secondAttribute="bottom" constant="8" symbolic="YES" id="t1k-cC-uzl"/>
+                            <constraint firstItem="BFk-uy-0S3" firstAttribute="top" secondItem="QBL-vP-szq" secondAttribute="bottom" constant="8" symbolic="YES" id="tR6-sJ-tz3"/>
+                            <constraint firstItem="DOB-CS-Vli" firstAttribute="trailing" secondItem="4Qu-yh-4fm" secondAttribute="trailing" constant="4" id="tw9-RE-hF2"/>
+                            <constraint firstItem="0ez-gh-K97" firstAttribute="top" secondItem="dmg-gc-a9a" secondAttribute="bottom" constant="8" symbolic="YES" id="vXG-ZL-L88"/>
+                            <constraint firstItem="bqV-Ve-aIP" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="16" id="vlI-7s-CCG"/>
+                            <constraint firstItem="Vw9-v0-l4j" firstAttribute="top" secondItem="hnl-Tb-iQZ" secondAttribute="bottom" constant="8" symbolic="YES" id="wq6-XZ-h62"/>
+                            <constraint firstItem="tB0-Gg-9QL" firstAttribute="top" secondItem="El2-3X-om7" secondAttribute="bottom" constant="8" symbolic="YES" id="x7n-Qi-Hgw"/>
+                            <constraint firstItem="n16-ZN-QeN" firstAttribute="leading" secondItem="DOB-CS-Vli" secondAttribute="leading" constant="20" id="zOm-fY-Gen"/>
+                            <constraint firstItem="wsP-nx-cF0" firstAttribute="top" secondItem="J5t-z9-jrv" secondAttribute="bottom" constant="8" symbolic="YES" id="za3-X8-muG"/>
+                            <constraint firstItem="0wW-2z-RKU" firstAttribute="leading" secondItem="n16-ZN-QeN" secondAttribute="trailing" constant="38" id="zhb-Cd-7g5"/>
+                            <constraint firstItem="6ny-fQ-GAL" firstAttribute="top" secondItem="bqV-Ve-aIP" secondAttribute="bottom" constant="8" symbolic="YES" id="zjm-E6-Csp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0sc-aX-3xM"/>
+                                <exclude reference="9Fz-bI-ctg"/>
+                                <exclude reference="A0r-eg-etf"/>
+                                <exclude reference="B4E-CO-U4g"/>
+                                <exclude reference="Csh-2o-chm"/>
+                                <exclude reference="E0z-0T-sRP"/>
+                                <exclude reference="ID0-YZ-hHT"/>
+                                <exclude reference="JzT-mG-ysV"/>
+                                <exclude reference="SXD-xR-X57"/>
+                                <exclude reference="bkK-5n-7YR"/>
+                                <exclude reference="ce8-dv-rcE"/>
+                                <exclude reference="gNX-0P-ylK"/>
+                                <exclude reference="pgS-yI-6lG"/>
+                                <exclude reference="tw9-RE-hF2"/>
+                                <exclude reference="KB3-Ey-w73"/>
+                                <exclude reference="asS-gc-LYr"/>
+                                <exclude reference="jjB-Ji-tvK"/>
+                                <exclude reference="ojT-NA-uPb"/>
+                                <exclude reference="Lhi-Ey-MqN"/>
+                                <exclude reference="Xy7-Wn-LOJ"/>
+                                <exclude reference="fwi-vj-ReJ"/>
+                                <exclude reference="wq6-XZ-h62"/>
+                                <exclude reference="84u-fA-bY3"/>
+                                <exclude reference="RXp-4P-JLI"/>
+                                <exclude reference="Szy-oP-FVJ"/>
+                                <exclude reference="neO-gZ-Yev"/>
+                                <exclude reference="A9j-Fe-Nz4"/>
+                                <exclude reference="AN1-VF-gFS"/>
+                                <exclude reference="dzQ-FE-7R6"/>
+                                <exclude reference="vXG-ZL-L88"/>
+                                <exclude reference="OSj-2t-1gO"/>
+                                <exclude reference="Say-Oz-keJ"/>
+                                <exclude reference="eAF-QF-4eZ"/>
+                                <exclude reference="srx-dM-FJU"/>
+                                <exclude reference="MbJ-Pf-0uE"/>
+                                <exclude reference="eWm-DV-1uE"/>
+                                <exclude reference="kCc-NH-O59"/>
+                                <exclude reference="za3-X8-muG"/>
+                                <exclude reference="1r9-1I-BqZ"/>
+                                <exclude reference="Anv-Ze-Pqu"/>
+                                <exclude reference="BKN-4f-KCH"/>
+                                <exclude reference="vlI-7s-CCG"/>
+                                <exclude reference="GSD-bO-raf"/>
+                                <exclude reference="ZyV-M7-rTD"/>
+                                <exclude reference="aCd-BK-wDX"/>
+                                <exclude reference="zjm-E6-Csp"/>
+                                <exclude reference="D0k-8i-QLn"/>
+                                <exclude reference="GDG-6C-QfE"/>
+                                <exclude reference="aHj-RA-XyI"/>
+                                <exclude reference="i2I-A2-Gf4"/>
+                                <exclude reference="od0-b1-eJD"/>
+                                <exclude reference="x7n-Qi-Hgw"/>
+                                <exclude reference="8ox-6t-04u"/>
+                                <exclude reference="gKN-WX-SHL"/>
+                                <exclude reference="t1k-cC-uzl"/>
+                                <exclude reference="0tf-LT-onX"/>
+                                <exclude reference="5ku-ON-bKy"/>
+                                <exclude reference="kfC-tI-cB0"/>
+                                <exclude reference="0KH-pd-5CL"/>
+                                <exclude reference="8sS-HB-Qcu"/>
+                                <exclude reference="mXD-Ta-lg3"/>
+                                <exclude reference="DJv-F1-tVs"/>
+                                <exclude reference="XCh-O3-Vem"/>
+                                <exclude reference="hs8-UI-IXs"/>
+                                <exclude reference="3mz-fh-G8S"/>
+                                <exclude reference="7Oq-Hd-3U7"/>
+                                <exclude reference="Zzz-L6-p5i"/>
+                                <exclude reference="0Yr-CF-8wH"/>
+                                <exclude reference="XGk-2s-6AQ"/>
+                                <exclude reference="dCm-4B-Ir6"/>
+                                <exclude reference="BbX-y5-gFZ"/>
+                                <exclude reference="JKY-Hr-EtF"/>
+                                <exclude reference="zOm-fY-Gen"/>
+                                <exclude reference="Y8n-CK-yR9"/>
+                                <exclude reference="kJ9-Yu-LR3"/>
+                                <exclude reference="q3z-yL-CCU"/>
+                                <exclude reference="zhb-Cd-7g5"/>
+                                <exclude reference="Sv9-Nq-nhU"/>
+                                <exclude reference="TE0-yv-Ahg"/>
+                                <exclude reference="pjx-i4-A2G"/>
+                                <exclude reference="6Wd-f9-gHf"/>
+                                <exclude reference="JFd-q7-zHq"/>
+                                <exclude reference="Lut-MC-afJ"/>
+                                <exclude reference="bIU-1f-GYq"/>
+                                <exclude reference="bgq-8y-bQy"/>
+                                <exclude reference="s0k-Ko-j9D"/>
+                                <exclude reference="cL9-fA-dRS"/>
+                                <exclude reference="mCL-NJ-ASN"/>
+                                <exclude reference="tR6-sJ-tz3"/>
+                                <exclude reference="Btw-iy-ttK"/>
+                                <exclude reference="E7y-2n-nSm"/>
+                                <exclude reference="JFV-cZ-CnC"/>
+                                <exclude reference="kMy-2V-aub"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="0sc-aX-3xM"/>
+                                <include reference="A0r-eg-etf"/>
+                                <include reference="JzT-mG-ysV"/>
+                                <include reference="bkK-5n-7YR"/>
+                                <include reference="gNX-0P-ylK"/>
+                                <include reference="pgS-yI-6lG"/>
+                                <include reference="tw9-RE-hF2"/>
+                                <include reference="KB3-Ey-w73"/>
+                                <include reference="asS-gc-LYr"/>
+                                <include reference="Lhi-Ey-MqN"/>
+                                <include reference="Xy7-Wn-LOJ"/>
+                                <include reference="RXp-4P-JLI"/>
+                                <include reference="neO-gZ-Yev"/>
+                                <include reference="A9j-Fe-Nz4"/>
+                                <include reference="AN1-VF-gFS"/>
+                                <include reference="Say-Oz-keJ"/>
+                                <include reference="srx-dM-FJU"/>
+                                <include reference="eWm-DV-1uE"/>
+                                <include reference="za3-X8-muG"/>
+                                <include reference="BKN-4f-KCH"/>
+                                <include reference="vlI-7s-CCG"/>
+                                <include reference="ZyV-M7-rTD"/>
+                                <include reference="aCd-BK-wDX"/>
+                                <include reference="D0k-8i-QLn"/>
+                                <include reference="aHj-RA-XyI"/>
+                                <include reference="i2I-A2-Gf4"/>
+                                <include reference="od0-b1-eJD"/>
+                                <include reference="gKN-WX-SHL"/>
+                                <include reference="0tf-LT-onX"/>
+                                <include reference="0KH-pd-5CL"/>
+                                <include reference="XCh-O3-Vem"/>
+                                <include reference="Zzz-L6-p5i"/>
+                                <include reference="dCm-4B-Ir6"/>
+                                <include reference="JKY-Hr-EtF"/>
+                                <include reference="kJ9-Yu-LR3"/>
+                                <include reference="q3z-yL-CCU"/>
+                                <include reference="Sv9-Nq-nhU"/>
+                                <include reference="pjx-i4-A2G"/>
+                                <include reference="6Wd-f9-gHf"/>
+                                <include reference="Lut-MC-afJ"/>
+                                <include reference="bgq-8y-bQy"/>
+                                <include reference="s0k-Ko-j9D"/>
+                                <include reference="cL9-fA-dRS"/>
+                                <include reference="mCL-NJ-ASN"/>
+                                <include reference="Btw-iy-ttK"/>
+                                <include reference="kMy-2V-aub"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9Fz-bI-ctg"/>
+                                <include reference="B4E-CO-U4g"/>
+                                <include reference="Csh-2o-chm"/>
+                                <include reference="E0z-0T-sRP"/>
+                                <include reference="ID0-YZ-hHT"/>
+                                <include reference="SXD-xR-X57"/>
+                                <include reference="ce8-dv-rcE"/>
+                                <include reference="jjB-Ji-tvK"/>
+                                <include reference="ojT-NA-uPb"/>
+                                <include reference="fwi-vj-ReJ"/>
+                                <include reference="wq6-XZ-h62"/>
+                                <include reference="84u-fA-bY3"/>
+                                <include reference="Szy-oP-FVJ"/>
+                                <include reference="dzQ-FE-7R6"/>
+                                <include reference="vXG-ZL-L88"/>
+                                <include reference="OSj-2t-1gO"/>
+                                <include reference="eAF-QF-4eZ"/>
+                                <include reference="MbJ-Pf-0uE"/>
+                                <include reference="kCc-NH-O59"/>
+                                <include reference="1r9-1I-BqZ"/>
+                                <include reference="Anv-Ze-Pqu"/>
+                                <include reference="GSD-bO-raf"/>
+                                <include reference="zjm-E6-Csp"/>
+                                <include reference="GDG-6C-QfE"/>
+                                <include reference="x7n-Qi-Hgw"/>
+                                <include reference="8ox-6t-04u"/>
+                                <include reference="t1k-cC-uzl"/>
+                                <include reference="5ku-ON-bKy"/>
+                                <include reference="kfC-tI-cB0"/>
+                                <include reference="8sS-HB-Qcu"/>
+                                <include reference="mXD-Ta-lg3"/>
+                                <include reference="DJv-F1-tVs"/>
+                                <include reference="hs8-UI-IXs"/>
+                                <include reference="3mz-fh-G8S"/>
+                                <include reference="7Oq-Hd-3U7"/>
+                                <include reference="0Yr-CF-8wH"/>
+                                <include reference="XGk-2s-6AQ"/>
+                                <include reference="BbX-y5-gFZ"/>
+                                <include reference="zOm-fY-Gen"/>
+                                <include reference="Y8n-CK-yR9"/>
+                                <include reference="zhb-Cd-7g5"/>
+                                <include reference="TE0-yv-Ahg"/>
+                                <include reference="JFd-q7-zHq"/>
+                                <include reference="bIU-1f-GYq"/>
+                                <include reference="tR6-sJ-tz3"/>
+                                <include reference="E7y-2n-nSm"/>
+                                <include reference="JFV-cZ-CnC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="d5P-fs-gZP"/>
+                    <connections>
+                        <outlet property="btnEditar" destination="n16-ZN-QeN" id="IFj-lX-6zz"/>
+                        <outlet property="btnEliminar" destination="t7y-Y9-mBe" id="hah-iO-vrb"/>
+                        <outlet property="btnGuardar" destination="0wW-2z-RKU" id="9wb-oE-im2"/>
+                        <outlet property="txtAltura" destination="6ny-fQ-GAL" id="yoN-uz-6Bd"/>
+                        <outlet property="txtCategoria" destination="4Qu-yh-4fm" id="emh-5P-W1x"/>
+                        <outlet property="txtHabOcult" destination="a9P-ar-7Gl" id="BXa-iI-PNO"/>
+                        <outlet property="txtHabilidad" destination="2sM-xN-8y4" id="ViF-Lg-J8a"/>
+                        <outlet property="txtNombre" destination="Vw9-v0-l4j" id="HSa-K6-APs"/>
+                        <outlet property="txtNumero" destination="wsP-nx-cF0" id="MaW-nQ-LJL"/>
+                        <outlet property="txtPeso" destination="tB0-Gg-9QL" id="4us-ba-WVg"/>
+                        <outlet property="txtRegion" destination="0ez-gh-K97" id="g1C-dd-1Rj"/>
+                        <outlet property="txtTipo1" destination="GqA-Ze-CA9" id="73o-hB-lMQ"/>
+                        <outlet property="txtTipo2" destination="BFk-uy-0S3" id="gMv-gg-erV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuD-Pi-NrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556.52173913043487" y="474.77678571428567"/>
+        </scene>
+        <!--Agregar Pokemon Controller-->
+        <scene sceneID="jU6-od-Smx">
+            <objects>
+                <viewController id="BYB-NK-XHa" customClass="AgregarPokemonController" customModule="Pokedex_3D_JesusE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="snV-hG-5sr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZL-62-Vnw">
+                                <rect key="frame" x="20" y="133" width="81" height="28"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="Igc-9f-VRD"/>
+                                    <constraint firstAttribute="height" constant="28" id="lAv-y5-UvJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-43-r0T">
+                                <rect key="frame" x="20" y="169" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Bol-tn-F0j"/>
+                                    <constraint firstAttribute="height" constant="34" id="dV1-iv-vpv"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Región:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-a8-RLa">
+                                <rect key="frame" x="20" y="211" width="79" height="21"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6Nq-C6-C1v"/>
+                                    <constraint firstAttribute="width" constant="79" id="SE6-u5-CiR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-Mh-6jf">
+                                <rect key="frame" x="20" y="240" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7UA-2o-JSe"/>
+                                    <constraint firstAttribute="width" constant="374" id="Jwe-Eh-m0I"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-RW-njX">
+                                <rect key="frame" x="20" y="282" width="87" height="21"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="VRg-gj-DVx"/>
+                                    <constraint firstAttribute="height" constant="21" id="gQr-an-iiL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-Oz-yQw">
+                                <rect key="frame" x="20" y="353" width="73" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ApE-wS-819"/>
+                                    <constraint firstAttribute="width" constant="73" id="puU-Re-A8p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs2-3M-ved">
+                                <rect key="frame" x="20" y="389" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="FVA-eY-qR2"/>
+                                    <constraint firstAttribute="height" constant="34" id="tDI-em-pWq"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdp-K8-VwD">
+                                <rect key="frame" x="239" y="353" width="53" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="15d-Bf-gJQ"/>
+                                    <constraint firstAttribute="height" constant="28" id="VGR-oo-n9i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ua-Hu-Skr">
+                                <rect key="frame" x="239" y="389" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="IdA-4Z-4O6"/>
+                                    <constraint firstAttribute="height" constant="34" id="xqq-5b-c5k"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-lP-Esc">
+                                <rect key="frame" x="20" y="311" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.089779465299007877" green="0.84196891191709844" blue="0.7501214823935648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="KXl-sd-0db"/>
+                                    <constraint firstAttribute="width" constant="374" id="YqV-VK-obp"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSJ-12-lmA">
+                                <rect key="frame" x="20" y="431" width="102" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Ur9-tc-K1a"/>
+                                    <constraint firstAttribute="width" constant="102" id="gE0-c9-nIr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCx-nb-qcT">
+                                <rect key="frame" x="20" y="467" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Ocf-Bc-0sL"/>
+                                    <constraint firstAttribute="height" constant="34" id="iyR-5D-CuY"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilidades:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3p-LY-9AU">
+                                <rect key="frame" x="20" y="509" width="109" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="s0S-gM-w4L"/>
+                                    <constraint firstAttribute="width" constant="109" id="uoL-fK-Dfv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-yU-XSb">
+                                <rect key="frame" x="20" y="545" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="cyS-aR-q3Q"/>
+                                    <constraint firstAttribute="height" constant="34" id="h9T-7L-MP7"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilidad oculta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-fU-gSz">
+                                <rect key="frame" x="239" y="509" width="157" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="QGI-gI-2fV"/>
+                                    <constraint firstAttribute="width" constant="157" id="zlD-f4-X9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="off-Uh-XM1">
+                                <rect key="frame" x="239" y="545" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="0BK-aj-avp"/>
+                                    <constraint firstAttribute="height" constant="34" id="SAh-pN-PaR"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYM-Hk-K7q">
+                                <rect key="frame" x="20" y="587" width="62" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="W5p-ZE-s0u"/>
+                                    <constraint firstAttribute="height" constant="28" id="elg-ol-3vJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-vN-gG1">
+                                <rect key="frame" x="20" y="623" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Uln-yp-wcA"/>
+                                    <constraint firstAttribute="width" constant="155" id="iwf-Qg-QdF"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0L-iR-KeL">
+                                <rect key="frame" x="239" y="587" width="68" height="28"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="U3Q-fS-Si7"/>
+                                    <constraint firstAttribute="height" constant="28" id="foA-to-mfs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
+                                <color key="textColor" red="0.82124352331606221" green="0.015341766966532831" blue="0.42102247286904504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7x-IH-aFa">
+                                <rect key="frame" x="239" y="623" width="155" height="34"/>
+                                <color key="backgroundColor" red="0.086765269906409884" green="0.84196891191709844" blue="0.72956200909808167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="7Ic-Rb-lVk"/>
+                                    <constraint firstAttribute="height" constant="34" id="qbM-gT-Otg"/>
+                                </constraints>
+                                <color key="textColor" red="0.82124352331606221" green="0.15172246689458077" blue="0.43927425779988888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-DN-wqN">
+                                <rect key="frame" x="284" y="705" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bIU-pZ-mda"/>
+                                    <constraint firstAttribute="width" constant="110" id="uKI-Sa-Hya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="doTapGuardar:" destination="BYB-NK-XHa" eventType="touchUpInside" id="q0Q-qN-82M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bes-TV-6I4"/>
+                        <color key="backgroundColor" red="0.6812739667844514" green="0.96365049956665516" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.088861126107998553" green="0.27207555057822802" blue="0.64507772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="Qdp-K8-VwD" secondAttribute="trailing" constant="122" id="00h-hh-ces"/>
+                            <constraint firstItem="6b9-RW-njX" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="13D-x2-XwT"/>
+                            <constraint firstItem="Fs2-3M-ved" firstAttribute="top" secondItem="fbq-Oz-yQw" secondAttribute="bottom" constant="8" symbolic="YES" id="1sv-aI-v4S"/>
+                            <constraint firstItem="2ua-Hu-Skr" firstAttribute="top" secondItem="Qdp-K8-VwD" secondAttribute="bottom" constant="8" symbolic="YES" id="3LM-nj-gk3"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="off-Uh-XM1" secondAttribute="trailing" constant="18" id="3Mv-jG-w9z"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="NSJ-12-lmA" secondAttribute="trailing" constant="290" id="3c2-h7-A3n"/>
+                            <constraint firstItem="Qdp-K8-VwD" firstAttribute="top" secondItem="YKk-lP-Esc" secondAttribute="bottom" constant="8" symbolic="YES" id="3d2-RW-KKP"/>
+                            <constraint firstItem="Vn6-Mh-6jf" firstAttribute="top" secondItem="MmV-a8-RLa" secondAttribute="bottom" constant="8" symbolic="YES" id="3gr-lV-0Gz"/>
+                            <constraint firstItem="w7x-IH-aFa" firstAttribute="leading" secondItem="rRB-vN-gG1" secondAttribute="trailing" constant="64" id="3mL-48-DuR"/>
+                            <constraint firstItem="YKk-lP-Esc" firstAttribute="top" secondItem="6b9-RW-njX" secondAttribute="bottom" constant="8" symbolic="YES" id="46N-kN-NvX"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="U0L-iR-KeL" secondAttribute="trailing" constant="107" id="7Rd-4i-GjK"/>
+                            <constraint firstItem="kYM-Hk-K7q" firstAttribute="top" secondItem="tgg-yU-XSb" secondAttribute="bottom" constant="8" symbolic="YES" id="7lZ-MB-JnF"/>
+                            <constraint firstItem="fbq-Oz-yQw" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="7sc-y2-ZyO"/>
+                            <constraint firstItem="w7x-IH-aFa" firstAttribute="top" secondItem="U0L-iR-KeL" secondAttribute="bottom" constant="8" symbolic="YES" id="8Pc-zZ-ww5"/>
+                            <constraint firstItem="a2e-43-r0T" firstAttribute="top" secondItem="QZL-62-Vnw" secondAttribute="bottom" constant="8" symbolic="YES" id="B5x-ZD-dcf"/>
+                            <constraint firstItem="kYM-Hk-K7q" firstAttribute="top" secondItem="tgg-yU-XSb" secondAttribute="bottom" constant="8" symbolic="YES" id="BSu-80-xIn"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="bMs-DN-wqN" secondAttribute="trailing" constant="18" id="CCk-Cq-Of4"/>
+                            <constraint firstItem="a2e-43-r0T" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="DCd-OX-zth"/>
+                            <constraint firstItem="6b9-RW-njX" firstAttribute="top" secondItem="Vn6-Mh-6jf" secondAttribute="bottom" constant="8" symbolic="YES" id="Dcq-KC-DCi"/>
+                            <constraint firstItem="kYM-Hk-K7q" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="DgA-At-vQt"/>
+                            <constraint firstItem="QZL-62-Vnw" firstAttribute="top" secondItem="bes-TV-6I4" secondAttribute="top" constant="42" id="Dsk-c2-tcR"/>
+                            <constraint firstItem="Fs2-3M-ved" firstAttribute="top" secondItem="fbq-Oz-yQw" secondAttribute="bottom" constant="8" symbolic="YES" id="E2d-gO-Ete"/>
+                            <constraint firstItem="MmV-a8-RLa" firstAttribute="top" secondItem="a2e-43-r0T" secondAttribute="bottom" constant="8" symbolic="YES" id="ERy-Ge-JGh"/>
+                            <constraint firstItem="NSJ-12-lmA" firstAttribute="top" secondItem="Fs2-3M-ved" secondAttribute="bottom" constant="8" symbolic="YES" id="FT2-ay-IaT"/>
+                            <constraint firstItem="U0L-iR-KeL" firstAttribute="top" secondItem="off-Uh-XM1" secondAttribute="bottom" constant="8" symbolic="YES" id="Gs7-PC-eSK"/>
+                            <constraint firstItem="N3p-LY-9AU" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="JWO-ar-0Yd"/>
+                            <constraint firstItem="Qdp-K8-VwD" firstAttribute="leading" secondItem="fbq-Oz-yQw" secondAttribute="trailing" constant="146" id="JXu-Yu-kTO"/>
+                            <constraint firstItem="UCx-nb-qcT" firstAttribute="top" secondItem="NSJ-12-lmA" secondAttribute="bottom" constant="8" symbolic="YES" id="KCG-pl-M1w"/>
+                            <constraint firstItem="YKk-lP-Esc" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="Kk9-RX-dPf"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="2ua-Hu-Skr" secondAttribute="trailing" constant="20" id="NuB-sf-EJ9"/>
+                            <constraint firstItem="QZL-62-Vnw" firstAttribute="top" secondItem="bes-TV-6I4" secondAttribute="top" constant="45" id="OCw-FW-OBV"/>
+                            <constraint firstItem="NSJ-12-lmA" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="OQA-kV-bBC"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="w7x-IH-aFa" secondAttribute="trailing" constant="20" id="QGj-Xf-dHX"/>
+                            <constraint firstItem="fbq-Oz-yQw" firstAttribute="top" secondItem="YKk-lP-Esc" secondAttribute="bottom" constant="8" symbolic="YES" id="Rfq-Uf-gMY"/>
+                            <constraint firstItem="6b9-RW-njX" firstAttribute="top" secondItem="Vn6-Mh-6jf" secondAttribute="bottom" constant="8" symbolic="YES" id="SEC-M4-wRi"/>
+                            <constraint firstItem="rRB-vN-gG1" firstAttribute="top" secondItem="kYM-Hk-K7q" secondAttribute="bottom" constant="8" symbolic="YES" id="Seb-16-INt"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="yUQ-fU-gSz" secondAttribute="trailing" constant="16" id="TFz-aP-IdD"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="w7x-IH-aFa" secondAttribute="trailing" constant="18" id="TKE-GN-Zf8"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="UCx-nb-qcT" secondAttribute="trailing" constant="18" id="TNa-h6-0JT"/>
+                            <constraint firstItem="N3p-LY-9AU" firstAttribute="top" secondItem="UCx-nb-qcT" secondAttribute="bottom" constant="8" symbolic="YES" id="TfE-NE-MYv"/>
+                            <constraint firstItem="a2e-43-r0T" firstAttribute="top" secondItem="QZL-62-Vnw" secondAttribute="bottom" constant="8" symbolic="YES" id="U4p-Mf-Su5"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="U0L-iR-KeL" secondAttribute="trailing" constant="105" id="UTT-7K-veg"/>
+                            <constraint firstItem="Qdp-K8-VwD" firstAttribute="top" secondItem="YKk-lP-Esc" secondAttribute="bottom" constant="8" symbolic="YES" id="VBB-a8-e51"/>
+                            <constraint firstItem="UCx-nb-qcT" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="Vbe-7L-glg"/>
+                            <constraint firstItem="Vn6-Mh-6jf" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="Vpe-8p-wei"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="off-Uh-XM1" secondAttribute="trailing" constant="20" id="W3c-Vm-v5D"/>
+                            <constraint firstItem="MmV-a8-RLa" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="Z1D-Rh-mzF"/>
+                            <constraint firstItem="YKk-lP-Esc" firstAttribute="top" secondItem="6b9-RW-njX" secondAttribute="bottom" constant="8" symbolic="YES" id="Z86-Xw-A3f"/>
+                            <constraint firstItem="MmV-a8-RLa" firstAttribute="top" secondItem="a2e-43-r0T" secondAttribute="bottom" constant="8" symbolic="YES" id="ZZC-fc-k1n"/>
+                            <constraint firstItem="U0L-iR-KeL" firstAttribute="top" secondItem="off-Uh-XM1" secondAttribute="bottom" constant="8" symbolic="YES" id="bFM-Ua-NYP"/>
+                            <constraint firstItem="yUQ-fU-gSz" firstAttribute="top" secondItem="UCx-nb-qcT" secondAttribute="bottom" constant="8" symbolic="YES" id="bM6-ly-WWI"/>
+                            <constraint firstItem="yUQ-fU-gSz" firstAttribute="leading" secondItem="N3p-LY-9AU" secondAttribute="trailing" constant="110" id="c0I-a9-MaE"/>
+                            <constraint firstItem="U0L-iR-KeL" firstAttribute="leading" secondItem="kYM-Hk-K7q" secondAttribute="trailing" constant="157" id="cOk-D9-Ale"/>
+                            <constraint firstItem="Vn6-Mh-6jf" firstAttribute="top" secondItem="MmV-a8-RLa" secondAttribute="bottom" constant="8" symbolic="YES" id="dSB-XH-j3l"/>
+                            <constraint firstItem="Vn6-Mh-6jf" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="f3E-gL-SAM"/>
+                            <constraint firstItem="6b9-RW-njX" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="fFd-K3-xwa"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="bMs-DN-wqN" secondAttribute="trailing" constant="20" id="fVf-OX-pCl"/>
+                            <constraint firstItem="YKk-lP-Esc" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="fxC-cK-pXY"/>
+                            <constraint firstItem="off-Uh-XM1" firstAttribute="leading" secondItem="tgg-yU-XSb" secondAttribute="trailing" constant="64" id="gJb-82-nAo"/>
+                            <constraint firstItem="bMs-DN-wqN" firstAttribute="top" secondItem="w7x-IH-aFa" secondAttribute="bottom" constant="48" id="gYl-fU-nfy"/>
+                            <constraint firstItem="MmV-a8-RLa" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="hCe-A9-uTr"/>
+                            <constraint firstItem="yUQ-fU-gSz" firstAttribute="top" secondItem="UCx-nb-qcT" secondAttribute="bottom" constant="8" symbolic="YES" id="hFI-N9-gyH"/>
+                            <constraint firstItem="a2e-43-r0T" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="hes-kR-OCT"/>
+                            <constraint firstItem="N3p-LY-9AU" firstAttribute="top" secondItem="UCx-nb-qcT" secondAttribute="bottom" constant="8" symbolic="YES" id="kQ4-10-tAQ"/>
+                            <constraint firstItem="fbq-Oz-yQw" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="kn2-pI-vgH"/>
+                            <constraint firstItem="Fs2-3M-ved" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="lwa-LK-YAg"/>
+                            <constraint firstItem="fbq-Oz-yQw" firstAttribute="top" secondItem="YKk-lP-Esc" secondAttribute="bottom" constant="8" symbolic="YES" id="ne4-oy-EjY"/>
+                            <constraint firstItem="QZL-62-Vnw" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="oGV-SG-GOL"/>
+                            <constraint firstItem="rRB-vN-gG1" firstAttribute="top" secondItem="kYM-Hk-K7q" secondAttribute="bottom" constant="8" symbolic="YES" id="okt-WS-hIx"/>
+                            <constraint firstItem="2ua-Hu-Skr" firstAttribute="top" secondItem="Qdp-K8-VwD" secondAttribute="bottom" constant="8" symbolic="YES" id="p0b-cT-e09"/>
+                            <constraint firstItem="bMs-DN-wqN" firstAttribute="top" secondItem="w7x-IH-aFa" secondAttribute="bottom" constant="48" id="p33-FW-HLg"/>
+                            <constraint firstItem="off-Uh-XM1" firstAttribute="top" secondItem="yUQ-fU-gSz" secondAttribute="bottom" constant="8" symbolic="YES" id="pXu-Eb-oyH"/>
+                            <constraint firstItem="rRB-vN-gG1" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="pgO-jd-8Zj"/>
+                            <constraint firstItem="Fs2-3M-ved" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="s0c-Sh-sRX"/>
+                            <constraint firstItem="2ua-Hu-Skr" firstAttribute="leading" secondItem="Fs2-3M-ved" secondAttribute="trailing" constant="64" id="smt-da-j98"/>
+                            <constraint firstItem="UCx-nb-qcT" firstAttribute="top" secondItem="NSJ-12-lmA" secondAttribute="bottom" constant="8" symbolic="YES" id="w3c-rE-Yzn"/>
+                            <constraint firstItem="bes-TV-6I4" firstAttribute="trailing" secondItem="yUQ-fU-gSz" secondAttribute="trailing" constant="18" id="wDh-8d-sg8"/>
+                            <constraint firstItem="tgg-yU-XSb" firstAttribute="top" secondItem="N3p-LY-9AU" secondAttribute="bottom" constant="8" symbolic="YES" id="wX0-Q1-cdc"/>
+                            <constraint firstItem="tgg-yU-XSb" firstAttribute="top" secondItem="N3p-LY-9AU" secondAttribute="bottom" constant="8" symbolic="YES" id="wm9-Do-clL"/>
+                            <constraint firstItem="w7x-IH-aFa" firstAttribute="top" secondItem="U0L-iR-KeL" secondAttribute="bottom" constant="8" symbolic="YES" id="x6K-g0-fnU"/>
+                            <constraint firstItem="QZL-62-Vnw" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="y2Z-F7-zZx"/>
+                            <constraint firstItem="NSJ-12-lmA" firstAttribute="top" secondItem="bes-TV-6I4" secondAttribute="top" constant="42" id="yNY-ng-HNd"/>
+                            <constraint firstItem="tgg-yU-XSb" firstAttribute="leading" secondItem="bes-TV-6I4" secondAttribute="leading" constant="20" id="z0t-CV-2Is"/>
+                            <constraint firstItem="off-Uh-XM1" firstAttribute="top" secondItem="yUQ-fU-gSz" secondAttribute="bottom" constant="8" symbolic="YES" id="zEV-So-lhU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="00h-hh-ces"/>
+                                <exclude reference="3Mv-jG-w9z"/>
+                                <exclude reference="3c2-h7-A3n"/>
+                                <exclude reference="7Rd-4i-GjK"/>
+                                <exclude reference="CCk-Cq-Of4"/>
+                                <exclude reference="NuB-sf-EJ9"/>
+                                <exclude reference="QGj-Xf-dHX"/>
+                                <exclude reference="TFz-aP-IdD"/>
+                                <exclude reference="TKE-GN-Zf8"/>
+                                <exclude reference="TNa-h6-0JT"/>
+                                <exclude reference="UTT-7K-veg"/>
+                                <exclude reference="W3c-Vm-v5D"/>
+                                <exclude reference="fVf-OX-pCl"/>
+                                <exclude reference="wDh-8d-sg8"/>
+                                <exclude reference="Dsk-c2-tcR"/>
+                                <exclude reference="OCw-FW-OBV"/>
+                                <exclude reference="oGV-SG-GOL"/>
+                                <exclude reference="y2Z-F7-zZx"/>
+                                <exclude reference="B5x-ZD-dcf"/>
+                                <exclude reference="DCd-OX-zth"/>
+                                <exclude reference="U4p-Mf-Su5"/>
+                                <exclude reference="hes-kR-OCT"/>
+                                <exclude reference="ERy-Ge-JGh"/>
+                                <exclude reference="Z1D-Rh-mzF"/>
+                                <exclude reference="ZZC-fc-k1n"/>
+                                <exclude reference="hCe-A9-uTr"/>
+                                <exclude reference="3gr-lV-0Gz"/>
+                                <exclude reference="Vpe-8p-wei"/>
+                                <exclude reference="dSB-XH-j3l"/>
+                                <exclude reference="f3E-gL-SAM"/>
+                                <exclude reference="13D-x2-XwT"/>
+                                <exclude reference="Dcq-KC-DCi"/>
+                                <exclude reference="SEC-M4-wRi"/>
+                                <exclude reference="fFd-K3-xwa"/>
+                                <exclude reference="46N-kN-NvX"/>
+                                <exclude reference="Kk9-RX-dPf"/>
+                                <exclude reference="Z86-Xw-A3f"/>
+                                <exclude reference="fxC-cK-pXY"/>
+                                <exclude reference="7sc-y2-ZyO"/>
+                                <exclude reference="Rfq-Uf-gMY"/>
+                                <exclude reference="kn2-pI-vgH"/>
+                                <exclude reference="ne4-oy-EjY"/>
+                                <exclude reference="1sv-aI-v4S"/>
+                                <exclude reference="E2d-gO-Ete"/>
+                                <exclude reference="lwa-LK-YAg"/>
+                                <exclude reference="s0c-Sh-sRX"/>
+                                <exclude reference="3d2-RW-KKP"/>
+                                <exclude reference="JXu-Yu-kTO"/>
+                                <exclude reference="VBB-a8-e51"/>
+                                <exclude reference="FT2-ay-IaT"/>
+                                <exclude reference="OQA-kV-bBC"/>
+                                <exclude reference="yNY-ng-HNd"/>
+                                <exclude reference="3LM-nj-gk3"/>
+                                <exclude reference="p0b-cT-e09"/>
+                                <exclude reference="smt-da-j98"/>
+                                <exclude reference="KCG-pl-M1w"/>
+                                <exclude reference="Vbe-7L-glg"/>
+                                <exclude reference="w3c-rE-Yzn"/>
+                                <exclude reference="JWO-ar-0Yd"/>
+                                <exclude reference="TfE-NE-MYv"/>
+                                <exclude reference="kQ4-10-tAQ"/>
+                                <exclude reference="wX0-Q1-cdc"/>
+                                <exclude reference="wm9-Do-clL"/>
+                                <exclude reference="z0t-CV-2Is"/>
+                                <exclude reference="bM6-ly-WWI"/>
+                                <exclude reference="c0I-a9-MaE"/>
+                                <exclude reference="hFI-N9-gyH"/>
+                                <exclude reference="7lZ-MB-JnF"/>
+                                <exclude reference="BSu-80-xIn"/>
+                                <exclude reference="DgA-At-vQt"/>
+                                <exclude reference="gJb-82-nAo"/>
+                                <exclude reference="pXu-Eb-oyH"/>
+                                <exclude reference="zEV-So-lhU"/>
+                                <exclude reference="Seb-16-INt"/>
+                                <exclude reference="okt-WS-hIx"/>
+                                <exclude reference="pgO-jd-8Zj"/>
+                                <exclude reference="Gs7-PC-eSK"/>
+                                <exclude reference="bFM-Ua-NYP"/>
+                                <exclude reference="cOk-D9-Ale"/>
+                                <exclude reference="3mL-48-DuR"/>
+                                <exclude reference="8Pc-zZ-ww5"/>
+                                <exclude reference="x6K-g0-fnU"/>
+                                <exclude reference="gYl-fU-nfy"/>
+                                <exclude reference="p33-FW-HLg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3Mv-jG-w9z"/>
+                                <include reference="3c2-h7-A3n"/>
+                                <include reference="CCk-Cq-Of4"/>
+                                <include reference="TFz-aP-IdD"/>
+                                <include reference="TKE-GN-Zf8"/>
+                                <include reference="TNa-h6-0JT"/>
+                                <include reference="UTT-7K-veg"/>
+                                <include reference="Dsk-c2-tcR"/>
+                                <include reference="oGV-SG-GOL"/>
+                                <include reference="B5x-ZD-dcf"/>
+                                <include reference="DCd-OX-zth"/>
+                                <include reference="ZZC-fc-k1n"/>
+                                <include reference="hCe-A9-uTr"/>
+                                <include reference="3gr-lV-0Gz"/>
+                                <include reference="f3E-gL-SAM"/>
+                                <include reference="SEC-M4-wRi"/>
+                                <include reference="fFd-K3-xwa"/>
+                                <include reference="46N-kN-NvX"/>
+                                <include reference="Kk9-RX-dPf"/>
+                                <include reference="kn2-pI-vgH"/>
+                                <include reference="ne4-oy-EjY"/>
+                                <include reference="E2d-gO-Ete"/>
+                                <include reference="s0c-Sh-sRX"/>
+                                <include reference="3d2-RW-KKP"/>
+                                <include reference="JXu-Yu-kTO"/>
+                                <include reference="yNY-ng-HNd"/>
+                                <include reference="p0b-cT-e09"/>
+                                <include reference="smt-da-j98"/>
+                                <include reference="w3c-rE-Yzn"/>
+                                <include reference="kQ4-10-tAQ"/>
+                                <include reference="wm9-Do-clL"/>
+                                <include reference="c0I-a9-MaE"/>
+                                <include reference="hFI-N9-gyH"/>
+                                <include reference="BSu-80-xIn"/>
+                                <include reference="gJb-82-nAo"/>
+                                <include reference="pXu-Eb-oyH"/>
+                                <include reference="Seb-16-INt"/>
+                                <include reference="Gs7-PC-eSK"/>
+                                <include reference="cOk-D9-Ale"/>
+                                <include reference="3mL-48-DuR"/>
+                                <include reference="8Pc-zZ-ww5"/>
+                                <include reference="gYl-fU-nfy"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="00h-hh-ces"/>
+                                <include reference="7Rd-4i-GjK"/>
+                                <include reference="NuB-sf-EJ9"/>
+                                <include reference="QGj-Xf-dHX"/>
+                                <include reference="W3c-Vm-v5D"/>
+                                <include reference="fVf-OX-pCl"/>
+                                <include reference="wDh-8d-sg8"/>
+                                <include reference="OCw-FW-OBV"/>
+                                <include reference="y2Z-F7-zZx"/>
+                                <include reference="U4p-Mf-Su5"/>
+                                <include reference="hes-kR-OCT"/>
+                                <include reference="ERy-Ge-JGh"/>
+                                <include reference="Z1D-Rh-mzF"/>
+                                <include reference="Vpe-8p-wei"/>
+                                <include reference="dSB-XH-j3l"/>
+                                <include reference="13D-x2-XwT"/>
+                                <include reference="Dcq-KC-DCi"/>
+                                <include reference="Z86-Xw-A3f"/>
+                                <include reference="fxC-cK-pXY"/>
+                                <include reference="7sc-y2-ZyO"/>
+                                <include reference="Rfq-Uf-gMY"/>
+                                <include reference="1sv-aI-v4S"/>
+                                <include reference="lwa-LK-YAg"/>
+                                <include reference="VBB-a8-e51"/>
+                                <include reference="FT2-ay-IaT"/>
+                                <include reference="OQA-kV-bBC"/>
+                                <include reference="3LM-nj-gk3"/>
+                                <include reference="KCG-pl-M1w"/>
+                                <include reference="Vbe-7L-glg"/>
+                                <include reference="JWO-ar-0Yd"/>
+                                <include reference="TfE-NE-MYv"/>
+                                <include reference="wX0-Q1-cdc"/>
+                                <include reference="z0t-CV-2Is"/>
+                                <include reference="bM6-ly-WWI"/>
+                                <include reference="7lZ-MB-JnF"/>
+                                <include reference="DgA-At-vQt"/>
+                                <include reference="zEV-So-lhU"/>
+                                <include reference="okt-WS-hIx"/>
+                                <include reference="pgO-jd-8Zj"/>
+                                <include reference="bFM-Ua-NYP"/>
+                                <include reference="x6K-g0-fnU"/>
+                                <include reference="p33-FW-HLg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="UW7-A2-byy"/>
+                    <connections>
+                        <outlet property="txtAltura" destination="Fs2-3M-ved" id="836-Wk-qBr"/>
+                        <outlet property="txtCategoria" destination="UCx-nb-qcT" id="1ym-Lz-baO"/>
+                        <outlet property="txtHabOcult" destination="off-Uh-XM1" id="I02-73-8tM"/>
+                        <outlet property="txtHabilidad" destination="tgg-yU-XSb" id="Pbu-Py-VNy"/>
+                        <outlet property="txtNombre" destination="a2e-43-r0T" id="0c1-1b-yD4"/>
+                        <outlet property="txtNumero" destination="YKk-lP-Esc" id="HFn-yL-l1G"/>
+                        <outlet property="txtPeso" destination="2ua-Hu-Skr" id="7cr-fA-zRl"/>
+                        <outlet property="txtRegion" destination="Vn6-Mh-6jf" id="gGJ-Me-QOW"/>
+                        <outlet property="txtTipo1" destination="rRB-vN-gG1" id="bdb-VX-9jR"/>
+                        <outlet property="txtTipo2" destination="w7x-IH-aFa" id="ZdN-Gg-SRX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2J1-UC-3sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556.52173913043487" y="-171.42857142857142"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.82124352331606221" green="0.081944573018095143" blue="0.062088171365862525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
